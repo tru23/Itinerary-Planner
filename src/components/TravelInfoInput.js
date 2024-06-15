@@ -57,7 +57,7 @@ const TravelInfoInput = ({ setTravelInfo }) => {
           onChange={(e) => setEndDate(e.target.value)}
           required
         />
-        <button type="button" onClick={handleSetTravelInfo}>Submit</button>
+        <button className='submit' type="button" onClick={handleSetTravelInfo}>Submit</button>
       </form>
     </div>
   );

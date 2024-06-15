@@ -1,5 +1,3 @@
-/* App.css */
-
 .App {
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -22,7 +20,7 @@ nav {
 .brand {
   font-size: 1rem;
   font-weight: 200;
-  padding-left: 20px; /* Adjust as needed */
+  padding-left: 10px;
 }
 
 .content {
@@ -31,6 +29,7 @@ nav {
   display: flex;
   justify-content: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .home-page,
@@ -40,6 +39,7 @@ nav {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .home-page h1 {
@@ -61,6 +61,7 @@ nav {
   width: 100%;
   justify-content: space-between;
   margin-top: 20px;
+  box-sizing: border-box;
 }
 
 .left-column {
@@ -79,56 +80,64 @@ nav {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .transparent-box form {
   display: flex;
   flex-direction: column;
 }
+.transparent-box form button {
+  align-self: center;
+}
 
 .transparent-box label {
   margin-bottom: 5px;
 }
 
-.transparent-box .task-inputs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.transparent-box .task-input {
-  flex: 1;
+.transparent-box input {
+  margin-left: 20px;
   padding: 10px;
-  margin-right: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 40px);
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-.transparent-box .task-input[type="date"] {
-  flex: 1; /* Ensure date input takes full width */
-}
-
-.transparent-box .task-input[type="text"] {
-  flex: 2; /* Make text input wider */
+  box-sizing: border-box;
 }
 
 .transparent-box button {
-  background-color: rgb(133, 133, 202);
+  background-color: rgb(111, 111, 178);
   color: white;
+  display: inline;
+  margin-left: 20px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
 }
 
-.transparent-box button:hover {
+.transparent-box button {
   opacity: 0.8;
 }
 
 @media (max-width: 768px) {
   .content {
     padding: 10px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    padding-left: 0;
+  }
+
+  .home-page h1,
+  .planner-page h1 {
+    font-size: 1.8rem;
   }
 
   .planner-content {
@@ -141,30 +150,25 @@ nav {
     flex: none;
     margin: 0;
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .transparent-box {
+    padding: 15px;
     width: 100%;
-    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .transparent-box .task-inputs {
-    flex-direction: column; /* Stack inputs vertically on mobile */
-  }
-
-  .transparent-box .task-input {
-    margin-right: 0;
-    margin-bottom: 10px;
-    width: 100%; /* Make inputs full width on mobile */
-  }
-
-  .transparent-box .task-input[type="text"] {
-    flex: none; /* Reset width for text input */
+  .transparent-box input {
+    margin-left: 0;
+    width: 100%;
   }
 
   .transparent-box button {
-    width: 100%; /* Make button full width on mobile */
-    max-width: 100%; /* Ensure button stretches */
-    margin-left: 0; /* Reset margin */
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Added margin-bottom to create space between buttons */
   }
 }
