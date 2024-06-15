@@ -1,0 +1,134 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./components/london_eye_detail.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+
+nav {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 200;
+  padding-left: 10px;
+}
+
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.home-page, .planner-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.home-page h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.planner-page h1{
+  text-align: center;
+  color:black;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  
+}
+
+
+.planner-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.right-column {
+  flex: 1;
+  margin-left: 20px;
+}
+
+
+.transparent-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.transparent-box form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.transparent-box label {
+  margin-bottom: 5px;
+}
+
+.transparent-box input {
+ 
+  
+  margin-left: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.transparent-box button {
+  background-color:rgb(133, 133, 202);
+  color: white;
+  display: inline;
+  margin-left: 50px;
+
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
+
+.transparent-box button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .planner-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .right-column {
+    margin-top: 20px;
+  }
+}
