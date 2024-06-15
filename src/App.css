@@ -121,14 +121,28 @@ nav {
   opacity: 0.8;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .planner-content {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
   }
-  
+
+  .left-column,
   .right-column {
-    margin-top: 20px;
+    flex: none; /* Reset flex-basis for full width on smaller screens */
+    margin: 0;
+    width: 100%;
+  }
+
+  .transparent-box {
+    width: 100%;
+    max-width: 100%; /* Ensure box stretches to full width */
+  }
+
+  .transparent-box input,
+  .transparent-box button {
+    width: 100%; /* Ensure inputs and buttons take full width */
+    max-width: 100%; /* Limit max-width for better readability */
+    margin-left: 0; /* Reset margin-left */
   }
 }
