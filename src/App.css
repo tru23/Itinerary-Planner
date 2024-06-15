@@ -1,3 +1,5 @@
+/* App.css */
+
 .App {
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -8,7 +10,6 @@
   background-size: cover;
   color: #333;
 }
-
 
 nav {
   width: 100%;
@@ -21,9 +22,8 @@ nav {
 .brand {
   font-size: 1rem;
   font-weight: 200;
-  padding-left: 10px;
+  padding-left: 20px; /* Adjust as needed */
 }
-
 
 .content {
   width: 100%;
@@ -33,8 +33,8 @@ nav {
   padding: 20px;
 }
 
-
-.home-page, .planner-page {
+.home-page,
+.planner-page {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -48,14 +48,13 @@ nav {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-.planner-page h1{
+
+.planner-page h1 {
   text-align: center;
-  color:black;
+  color: black;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  
 }
-
 
 .planner-content {
   display: flex;
@@ -74,7 +73,6 @@ nav {
   margin-left: 20px;
 }
 
-
 .transparent-box {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -86,35 +84,42 @@ nav {
 .transparent-box form {
   display: flex;
   flex-direction: column;
-
 }
 
 .transparent-box label {
   margin-bottom: 5px;
 }
 
-.transparent-box input {
- 
-  
-  margin-left: 20px;
-  padding: 10px;
+.transparent-box .task-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
-  width: auto;
+}
+
+.transparent-box .task-input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.transparent-box button {
-  background-color:rgb(133, 133, 202);
-  color: white;
-  display: inline;
-  margin-left: 50px;
+.transparent-box .task-input[type="date"] {
+  flex: 1; /* Ensure date input takes full width */
+}
 
+.transparent-box .task-input[type="text"] {
+  flex: 2; /* Make text input wider */
+}
+
+.transparent-box button {
+  background-color: rgb(133, 133, 202);
+  color: white;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  
 }
 
 .transparent-box button:hover {
@@ -122,27 +127,44 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .content {
+    padding: 10px;
+  }
+
   .planner-content {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
   }
 
   .left-column,
   .right-column {
-    flex: none; /* Reset flex-basis for full width on smaller screens */
+    flex: none;
     margin: 0;
     width: 100%;
   }
 
   .transparent-box {
     width: 100%;
-    max-width: 100%; /* Ensure box stretches to full width */
+    max-width: 100%;
   }
 
-  .transparent-box input,
+  .transparent-box .task-inputs {
+    flex-direction: column; /* Stack inputs vertically on mobile */
+  }
+
+  .transparent-box .task-input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%; /* Make inputs full width on mobile */
+  }
+
+  .transparent-box .task-input[type="text"] {
+    flex: none; /* Reset width for text input */
+  }
+
   .transparent-box button {
-    width: 100%; /* Ensure inputs and buttons take full width */
-    max-width: 100%; /* Limit max-width for better readability */
-    margin-left: 0; /* Reset margin-left */
+    width: 100%; /* Make button full width on mobile */
+    max-width: 100%; /* Ensure button stretches */
+    margin-left: 0; /* Reset margin */
   }
 }
